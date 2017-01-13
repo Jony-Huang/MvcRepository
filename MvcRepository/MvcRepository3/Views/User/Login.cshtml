@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+<form action="~/User/Login" method="post">
+
+    @TempData["Message"]
+    username: <input type="text" name="name" />
+    <br /><br />
+    password: <input type="password" name="pwd" />
+
+    <input type="submit" value="submit" />
+
+</form>
