@@ -94,8 +94,8 @@ namespace MvcRepository3.Controllers
         [DescAttrbute(Name="用户中心")]
         public ActionResult UserCenter()
         {
-           
-            var userList = unitRepository.UserRepository.Get();
+
+            var userList = unitRepository.UserRepository.Get(orderBy: q => q.OrderByDescending(u => u.ID));
             unitRepository.Dispose();
             return View(userList);
 

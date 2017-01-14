@@ -15,7 +15,7 @@ namespace MvcRepository3.Repositories
             this.context=context;
         }
 
-       public IEnumerable<User> Get()
+       public IEnumerable<User> GetHa()
         {
             return context.User.ToList();
         }

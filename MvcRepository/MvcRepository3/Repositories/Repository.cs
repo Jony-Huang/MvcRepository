@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Web;
 
 namespace MvcRepository3.Repositories
@@ -19,14 +20,37 @@ namespace MvcRepository3.Repositories
 
         public Context Context { get { return this.context; } }
 
-        public IEnumerable<T> GetAll()
+        public IEnumerable<T> Get(Expression<Func<T, bool>> filter = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,  string includeProperties = "")
         {
-            return this.dbSet.ToList();
-        }
+            IQueryable<T> query = dbSet;
+            if (filter != null)
+            {
+                query.Where(filter);
+            }
 
-        public T GetByID(object ID)
-        {
-            return this.dbSet.Find(ID);
+            foreach (var item in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                query = query.Include(item);
+            }
+
+            if (orderBy != null)
+            {
+                //if(isDesc)
+                //{
+                    
+                //}
+                //else
+                //{
+                //    return orderBy(query).ToList();
+                //}
+                return orderBy(query).ToList();
+                
+            }
+            else
+            {
+                return query.ToList();
+            }
+
         }
 
         public void Insert(T t)
