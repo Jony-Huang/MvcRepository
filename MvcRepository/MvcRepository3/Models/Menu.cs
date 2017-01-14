@@ -11,5 +11,7 @@ namespace MvcRepository3.Models
         public string Controller { get; set; }
         public string Action { get; set; }
 
+        public string ActionName { get; set; }
+
     }
 }
