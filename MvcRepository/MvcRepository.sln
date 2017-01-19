@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcRepository3", "MvcRepository3\MvcRepository3.csproj", "{14F405A2-C620-47DD-8975-6655C7C67A4E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPocoDemo", "NPocoDemo\NPocoDemo.csproj", "{EB738899-BB6B-44EE-AA1A-A5AFF01927BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{14F405A2-C620-47DD-8975-6655C7C67A4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14F405A2-C620-47DD-8975-6655C7C67A4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14F405A2-C620-47DD-8975-6655C7C67A4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB738899-BB6B-44EE-AA1A-A5AFF01927BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB738899-BB6B-44EE-AA1A-A5AFF01927BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB738899-BB6B-44EE-AA1A-A5AFF01927BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB738899-BB6B-44EE-AA1A-A5AFF01927BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
