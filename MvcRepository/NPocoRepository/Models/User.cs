@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace NPocoDemo.Models
+namespace NPocoRepository.Models
 {
     public class User
     {
@@ -12,8 +12,6 @@ namespace NPocoDemo.Models
         public string Name { get; set; }
 
         public string PassWord { get; set; }
-
-        public ICollection<UserRole> UserRole { get; set; }
 
     }
 }

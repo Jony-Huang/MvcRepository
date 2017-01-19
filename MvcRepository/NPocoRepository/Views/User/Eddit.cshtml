@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Eddit";
+}
+
+@model IEnumerable<NPocoRepository.Models.User>
+
+
+<h2>编辑中心</h2>
+
+<table border="1">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>ID</td>
+            <td>@Html.DisplayFor(m => item.ID)</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>@Html.DisplayFor(m => item.Name)</td>
+        </tr>
+        <tr>
+            <td>Pwd</td>
+            <td>@Html.DisplayFor(m => item.PassWord)</td>
+        </tr>
+    }
+</table>
+

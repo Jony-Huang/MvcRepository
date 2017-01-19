@@ -1,0 +1,19 @@
+﻿@model IEnumerable<NPocoRepository.Models.User>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>用户中心</h2>
+
+<table border="1">
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>ID</td>
+        <td>@Html.DisplayFor(m => item.ID)</td>
+        <td>Name</td>
+        <td>@Html.DisplayFor(m => item.Name)</td>
+    </tr>
+    }
+</table>
