@@ -1,4 +1,5 @@
 ﻿
+@model IEnumerable<MvcRepository3.Models.User>
 @{
     ViewBag.Title = "UserCenter";
 }
@@ -6,4 +7,18 @@
 <h2>UserCenter</h2>
 
 登录的用户可以看到，未登录的人看不到
+
+
+<table border="1">
+    @foreach(var item in Model)
+    {<tr>
+        <td>ID</td>
+        <td>@Html.DisplayFor(m=>item.ID)</td>
+        <td>Name</td>
+        <td>@Html.DisplayFor(m => item.Name)</td>
+    </tr>
+    }
+</table>
+
+
 
