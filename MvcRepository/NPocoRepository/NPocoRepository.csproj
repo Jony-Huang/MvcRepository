@@ -39,13 +39,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\NPocoDemo\bin\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="NPoco">
-      <HintPath>..\NPocoDemo\bin\NPoco.dll</HintPath>
+      <HintPath>..\packages\NPoco.3.4.8\lib\net45\NPoco.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />

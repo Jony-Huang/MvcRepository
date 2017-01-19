@@ -5,6 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Web;
 using NPoco;
+using NPoco.Linq;
 
 namespace NPocoRepository.Repositories
 {
@@ -18,7 +19,7 @@ namespace NPocoRepository.Repositories
 
         //public Database Context { get { return this.context; } }
 
-        public IEnumerable<T> Get(Expression<Func<T, bool>> filter = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,  string includeProperties = "")
+        public IEnumerable<T> Get(Expression<Func<T, bool>> filter = null, Func<IQueryProvider<T>, IQueryProvider<T>> orderBy = null, string includeProperties = "")
         {
             var query = context.Query<T>();
             if (filter != null)
@@ -31,11 +32,11 @@ namespace NPocoRepository.Repositories
             //    query = query.Include()
             //}
 
-            //if (orderBy != null)
-            //{
-            //    return orderBy(query).ToList();
-                
-            //}
+            if (orderBy != null)
+            {
+                return orderBy(query).ToList();
+
+            }
             //else
             //{
             //    return query.ToList();

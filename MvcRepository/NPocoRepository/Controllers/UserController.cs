@@ -20,7 +20,7 @@ namespace NPocoRepository.Controllers
 
         public ActionResult Eddit()
         {
-            var user = unitRepository.UserRepository.Get(filter: u => (new int[] { 1, 2, 3 }).Contains(u.ID)).ToList();
+            var user = unitRepository.UserRepository.Get(filter: u => (new int[] { 1, 2, 3 }).Contains(u.ID), orderBy: u => u.OrderByDescending(q => q.ID)).ToList();
             unitRepository.Dispose();
             return View(user);
         }

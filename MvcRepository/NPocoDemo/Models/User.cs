@@ -13,7 +13,7 @@ namespace NPocoDemo.Models
 
         public string PassWord { get; set; }
 
-        public ICollection<UserRole> UserRole { get; set; }
+        public UserRole UserRole { get; set; }
 
     }
 }
