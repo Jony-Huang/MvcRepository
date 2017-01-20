@@ -23,6 +23,7 @@ namespace NPocoRepository.Controllers
             var user = unitRepository.UserRepository.Get(filter: u => (new int[] { 1, 2, 3 }).Contains(u.ID), orderBy: u => u.OrderByDescending(q => q.ID)).ToList();
             unitRepository.Dispose();
             return View(user);
+
         }
     }
 }
